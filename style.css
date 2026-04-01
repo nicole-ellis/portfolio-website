@@ -6,18 +6,33 @@
         src: url('fonts/Sail-Regular.otf');
     }
 
+    @font-face {
+        font-family: 'Pigeon';
+        src: url('fonts/Pigeon.otf');
+    }
+
+    @font-face {
+        font-family: 'Justus-Oldstyle';
+        src: url('fonts/Justus-Oldstyle.ttf');
+    }
+
+    @font-face {
+        font-family: 'Niconne-Regular';
+        src: url('fonts/Niconne-Regular.ttf');
+    }
+
 /* ========================
    BASIC STYLING
 ======================== */
     body {
         margin: 0;
-        font-family: 'Arial', sans-serif;
+        font-family: 'Justus-Oldstyle', sans-serif;
         background: linear-gradient(180deg,#212c4e, #8392c4);
         color: #bdccdb;
     }
 
     h1, h2, nav {
-        font-family: 'Sail', sans-serif;
+        font-family: 'Niconne-Regular', sans-serif;
     }
   
 /* ========================

@@ -21,18 +21,23 @@
         src: url('fonts/Niconne-Regular.ttf');
     }
 
+      @font-face {
+      font-family: 'Flaviotte';
+      src: url('fonts/Flaviotte.ttf');
+    }
+
 /* ========================
    BASIC STYLING
 ======================== */
     body {
         margin: 0;
         font-family: 'Justus-Oldstyle', sans-serif;
-        background: linear-gradient(180deg,#212c4e, #8392c4);
-        color: #bdccdb;
+        background: linear-gradient(180deg,#e9c1e7, #8392c4);
+        color: #0b131a;
     }
 
     h1, h2, nav {
-        font-family: 'Niconne-Regular', sans-serif;
+        font-family: 'Flaviotte', sans-serif;
     }
   
 /* ========================
@@ -43,7 +48,7 @@
     background-color: #1e293b;
     padding: 15px;
     border-radius: 10px;
-    margin: 20px auto;
+    margin: 40px auto;
     max-width: 900px;
   }
   
@@ -115,3 +120,63 @@
   section {
     margin-bottom: 50px
   }
+
+/* ========================
+   ANIMATION
+======================== */
+.player {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 64px;
+  height: 128px;
+
+  background-image: url("images/pixilart-sprite_4.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 384px 128px;
+
+  image-rendering: pixelated;
+  z-index: 10;
+
+  animation: walk 0.8s steps(6) infinite;
+}
+
+@keyframes walk {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -384px 0;
+  }
+}
+
+
+.player {
+  animation:
+    walk 0.8s steps(6) infinite,
+    move 10s linear infinite;
+}
+
+@keyframes move {
+  0% { left: 0%; }
+  100% { left: 100%; }
+}
+
+@keyframes move {
+  0% {
+    left: 0%;
+    transform: scaleX(1);
+  }
+  50% {
+    left: 80%;
+    transform: scaleX(1);
+  }
+  51% {
+    transform: scaleX(-1);
+  }
+  100% {
+    left: 0%;
+    transform: scaleX(-1);
+  }
+}
